@@ -192,7 +192,7 @@ Dockerfile 在执行第四步 RUN 指令时失败。我们可以利用第三步�
 ![Dockerfile常用指令](/assets/Dockerfile常用指令.png)
 
 - docker build 根据 Dockerfile 构建一个镜像
-- docker images
+- docker images 列出镜像
 - docker inspect
 - docker rm
 - docker search
