@@ -50,3 +50,22 @@ Docker daemon 运行在 Docker host 上，负责创建、运行、监控容器�
 - 可以从无到有开始创建镜像
 - 也可以下载并使用别人创建好的现成的镜像
 - 还可以在现有镜像上创建新的镜像
+
+我们可以将镜像的内容和创建步骤描述在一个文本文件中，这个文件被称作 Dockerfile，通过执行 docker build <docker-file> 命令可以构建出 Docker 镜像，后面我们会讨论。
+
+#### Docker 容器
+
+Docker 容器就是 Docker 镜像的运行实例。
+
+用户可以通过 CLI（docker）或是 API 启动、停止、移动或删除容器。可以这么认为，对于应用软件，镜像是软件生命周期的构建和打包阶段，而容器则是启动和运行阶段。
+
+#### Registry 镜像仓库
+
+Registry 是存放 Docker 镜像的仓库，Registry 分私有和公有两种。
+
+Docker Hub（https://hub.docker.com/）是默认的 Registry，由 Docker 公司维护，上面有数以万计的镜像，用户可以自由下载和使用。
+
+出于对速度或安全的考虑，用户也可以创建自己的私有 Registry。后面我们会学习如何搭建私有 Registry。
+
+docker pull 命令可以从 Registry 下载镜像。
+docker run 命令则是先下载镜像（如果本地没有），然后再启动容器。
