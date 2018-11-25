@@ -210,6 +210,7 @@ docker save     将一个或多个镜像保存到tar存档
     2.7M busybox.tar
     $ docker save -o fedora-all.tar fedora
     $ docker save -o fedora-latest.tar fedora:latest
+    $ docker save -o ubuntu.tar ubuntu:lucid ubuntu:saucy
 
 docker export
 docker load
