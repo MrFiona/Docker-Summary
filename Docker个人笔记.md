@@ -19,4 +19,4 @@ Docker 的核心组件包括：
 Docker 架构如下图所示：
 
 ![Docker架构图](/assets/Dcoker架构图.jpg)
-![](/assets/20170214190946299.png)
+![Docker图解](/assets/20170214190946299.png)
