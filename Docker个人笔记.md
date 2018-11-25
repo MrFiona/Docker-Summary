@@ -37,3 +37,16 @@ systemctl status docker.service
 ```
 
 Docker daemon 运行在 Docker host 上，负责创建、运行、监控容器，构建、存储镜像。
+
+
+#### Docker 镜像
+
+可将 Docker 镜像看着只读模板，通过它可以创建 Docker 容器。
+
+例如某个镜像可能包含一个 Ubuntu 操作系统、一个 Apache HTTP Server 以及用户开发的 Web 应用。
+
+镜像有多种生成方法：
+
+- 可以从无到有开始创建镜像
+- 也可以下载并使用别人创建好的现成的镜像
+- 还可以在现有镜像上创建新的镜像
