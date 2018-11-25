@@ -29,3 +29,5 @@ Docker 采用的是 Client/Server 架构。客户端向服务器发送请求，�
 最常用的 Docker 客户端是 docker 命令。通过 docker 我们可以方便地在 Host 上构建和运行容器。除了 docker 命令行工具，用户也可以通过 REST API 与服务器通信。
 
 #### Docker 服务器
+
+Docker daemon 是服务器组件，以 Linux 后台服务的方式运行。
