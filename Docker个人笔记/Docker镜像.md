@@ -182,3 +182,5 @@ docker pull 命令输出显示第一层（base 镜像）已经存在，不需要
 ![Dockerfile调试2](/assets/Dockerfile调试2.PNG)
 
 Dockerfile 在执行第四步 RUN 指令时失败。我们可以利用第三步创建的镜像 11b08c22e819 进行调试，方式是通过 docker run -it 启动镜像的一个容器。
+
+手工执行 RUN 指令很容易定位失败的原因是 busybox 镜像中没有 error.log文件。虽然这是个极其简单的例子，但它很好地展示了调试 Dockerfile 的方法
