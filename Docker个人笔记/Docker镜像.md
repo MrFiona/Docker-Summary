@@ -168,3 +168,13 @@ docker pull 命令输出显示第一层（base 镜像）已经存在，不需要
 由 Dockerfile 可知 httpd 的 base 镜像为 debian，正好之前已经下载过 debian 镜像，所以有缓存可用。通过 docker history 可以进一步验证。
 
 ![Docker缓存2](/assets/Docker缓存2.PNG)
+
+### 调试 Dockerfile
+
+先回顾一下通过 Dockerfile 构建镜像的过程：
+
+1. 从 base 镜像运行一个容器。
+2. 执行一条指令，对容器做修改。
+3. 执行类似 docker commit 的操作，生成一个新的镜像层。
+4. Docker 再基于刚刚提交的镜像运行一个新容器。
+5. 重复 2-4 步，直到 Dockerfile 中的所有指令执行完毕。
