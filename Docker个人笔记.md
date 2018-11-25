@@ -21,3 +21,5 @@ Docker 架构如下图所示：
 
 ![Docker架构图](/assets/Dcoker架构图.jpg)
 ![Docker图解](/assets/20170214190946299.png)
+
+Docker 采用的是 Client/Server 架构。客户端向服务器发送请求，服务器负责构建、运行和分发容器。客户端和服务器可以运行在同一个 Host 上，客户端也可以通过 socket 或 REST API 与远程的服务器通信
