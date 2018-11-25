@@ -203,21 +203,39 @@ Dockerfile 在执行第四步 RUN 指令时失败。我们可以利用第三步�
     删除一个或多个容器
     
 - docker search
+
 - docker push
+
 - docker pull
+
 - docker save
+
 - docker export
+
 - docker load
+
 - docker import
+
 - docker run
+
 - docker exec
+
 - docker attach
+
 - docker commit
+
 - docker tag
+
 - docker ps
+
 - docker pause
+
 - docker unpause
+
 - docker start
+
 - docker kill
+
 - docker restart
+
 - docker rmi
