@@ -122,6 +122,6 @@ Docker 并不建议用户通过这种方式构建镜像。原因如下：
 
 Dockerfile 是一个文本文件，记录了镜像构建的所有步骤。
 
-![](/assets/Dockerfile构建镜像1.PNG)
+![Dockerfile构建镜像1](/assets/Dockerfile构建镜像1.PNG)
 
-![](/assets/Dockerfile构建镜像2.PNG)
+![Dockerfile构建镜像2](/assets/Dockerfile构建镜像2.PNG)
