@@ -179,3 +179,4 @@ docker pull 命令输出显示第一层（base 镜像）已经存在，不需要
     4. Docker 再基于刚刚提交的镜像运行一个新容器。
     5. 重复 2-4 步，直到 Dockerfile 中的所有指令执行完毕。
 
+![Dockerfile调试](/assets/Dockerfile调试.PNG)
