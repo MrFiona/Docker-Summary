@@ -196,6 +196,7 @@ docker build    根据 Dockerfile 构建一个镜像
 docker images   列出镜像
 docker inspect
 docker search   在 Docker Hub 中搜索镜
+
 docker push     推送一个镜像或仓库到 registry  
 docker pull     拉取一个镜像或仓库到 registry
     
