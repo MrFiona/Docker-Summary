@@ -231,7 +231,7 @@ docker load     从tar存档或STDIN加载镜像
     fedora              latest              58394af37342        7 weeks ago         385.5 MB
 
 docker export   将容器的文件系统导出为tar存档
-docker import
+docker import   从tarball导入内容以创建文件系统映像
 
 docker run      在一个新的容器中执行一条命令   
 docker exec     在容器中执行一条命令   
