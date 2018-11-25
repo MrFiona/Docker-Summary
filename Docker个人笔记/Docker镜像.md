@@ -194,7 +194,7 @@ Dockerfile 在执行第四步 RUN 指令时失败。我们可以利用第三步�
 ```
 docker build    根据 Dockerfile 构建一个镜像
 docker images   列出镜像
-docker inspect
+docker inspect  提取出容器或者镜像最顶层的元数据
 docker search   在 Docker Hub 中搜索镜
 
 docker push     推送一个镜像或仓库到 registry  
