@@ -197,11 +197,13 @@ docker images   列出镜像
 docker inspect
 docker search   在 Docker Hub 中搜索镜
 docker push     推送一个镜像或仓库到 registry  
-docker pull     拉取一个镜像或仓库到 registry    
+docker pull     拉取一个镜像或仓库到 registry
+    
 docker save
 docker export
 docker load
 docker import
+
 docker run      在一个新的容器中执行一条命令   
 docker exec     在容器中执行一条命令   
 docker attach   介入到一个正在运行的容器    
