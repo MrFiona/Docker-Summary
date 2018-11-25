@@ -133,4 +133,5 @@ Dockerfile 是一个文本文件，记录了镜像构建的所有步骤。
     3. 执行 FROM，将 hub.yun.paic.com.cn/anbot-ci/tomcat:3.1 作为 base 镜像。ubuntu 镜像 ID 为 4a521e439418。
     4. 执行 RUN，打印hello world!!!，启动 ID 为 8a2d49a04152 的临时容器，在容器中通过 echo "hello world!!!"，执行成功后，将容器保存为镜像，其 ID 为 c44d9f990ab。**备注：这一步底层使用的是类似 docker commit 的命令。**
     
-    ![构建历史](/assets/构建历史.PNG)
+    
+![构建历史](/assets/构建历史.PNG)
