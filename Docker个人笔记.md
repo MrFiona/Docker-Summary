@@ -13,6 +13,6 @@ Docker 的核心组件包括：
     - Docker 客户端 - Client
     - Docker 服务器 - Docker daemon
     - Docker 镜像 - Image
-    - Registry
+    - Registry 镜像仓库
     - Docker 容器 - Container
 
