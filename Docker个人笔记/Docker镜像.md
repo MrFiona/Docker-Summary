@@ -46,3 +46,8 @@ Docker 支持通过扩展现有镜像，创建新的镜像。
 实际上，Docker Hub 中 99% 的镜像都是通过在 base 镜像中安装和配置需要的软件构建出来的。比如我们现在构建一个新的镜像，Dockerfile 如下：
 
 ![镜像的分层结构](/assets/镜像的分层结构.png)
+
+- ① 新镜像不再是从 scratch 开始，而是直接在 Debian base 镜像上构建。
+- ② 安装 emacs 编辑器。
+- ③ 安装 apache2。
+- ④ 容器启动时运行 bash。
