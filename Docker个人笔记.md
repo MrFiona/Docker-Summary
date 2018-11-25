@@ -34,5 +34,4 @@ Docker daemon 是服务器组件，以 Linux 后台服务的方式运行。
 
 ```
 systemctl status docker.service
-
 ```
