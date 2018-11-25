@@ -131,3 +131,4 @@ Dockerfile 是一个文本文件，记录了镜像构建的所有步骤。
     1. 运行 docker build 命令，-t 将新镜像命名为 goujian:1.0，命令末尾的 . 指明 build context 为当前目录。Docker 默认会从 build context 中查找 Dockerfile 文件，我们也可以通过 -f 参数指定 Dockerfile 的位置。
     2. 从这步开始就是镜像真正的构建过程。首先 Docker 将 build context 中的所有文件发送给 Docker daemon。build context 为镜像构建提供所需要的文件或目录。Dockerfile 中的 ADD、COPY 等命令可以将 build context 中的文件添加到镜像。此例中，build context 为当前目录 /root/zhangpeng/test，该目录下的所有文件和子目录都会被发送给 Docker daemon。所以，使用 build context 就得小心了，不要将多余文件放到 build context，特别不要把 /、/usr 作为 build context，否则构建过程会相当缓慢甚至失败。
     3. 执行 FROM，将 hub.yun.paic.com.cn/anbot-ci/tomcat:3.1 作为 base 镜像。ubuntu 镜像 ID 为 4a521e439418。
+    4. 执行 RUN，打印hello world!!!，具体步骤为
