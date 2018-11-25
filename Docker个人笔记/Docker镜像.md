@@ -101,3 +101,6 @@ Docker 提供了两种构建镜像的方法：
 - docker commit 命令
 - Dockerfile 构建文件
 
+### docker commit 构建
+
+### Dockerfile 构建
