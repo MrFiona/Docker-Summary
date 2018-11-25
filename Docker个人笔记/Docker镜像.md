@@ -99,5 +99,5 @@ Docker 支持通过扩展现有镜像，创建新的镜像。
 Docker 提供了两种构建镜像的方法：
 
 - docker commit 命令
-
 - Dockerfile 构建文件
+
