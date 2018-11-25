@@ -125,3 +125,7 @@ Dockerfile 是一个文本文件，记录了镜像构建的所有步骤。
 ![Dockerfile构建镜像1](/assets/Dockerfile构建镜像1.PNG)
 
 ![Dockerfile构建镜像2](/assets/Dockerfile构建镜像2.PNG)
+
+构建过程：
+
+    1. 运行 docker build 命令，-t 将新镜像命名为 goujian:1.0，命令末尾的 . 指明 build context 为当前目录。Docker 默认会从 build context 中查找 Dockerfile 文件，我们也可以通过 -f 参数指定 Dockerfile 的位置。
