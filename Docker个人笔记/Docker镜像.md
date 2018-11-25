@@ -119,3 +119,9 @@ Docker 并不建议用户通过这种方式构建镜像。原因如下：
 原因是：即便是用 Dockerfile（推荐方法）构建镜像，底层也 docker commit 一层一层构建新镜像的。学习 docker commit 能够帮助我们更加深入地理解构建过程和镜像的分层结构。
 
 ### Dockerfile 构建
+
+Dockerfile 是一个文本文件，记录了镜像构建的所有步骤。
+
+![Dockerfile构建镜像1](/assets/Dockerfile构建镜像1.PNG)
+
+![Dockerfile构建镜像2](/assets/Dockerfile构建镜像2.PNG)
