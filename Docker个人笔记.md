@@ -10,11 +10,11 @@ Docker是一个开源的引擎，可以轻松的为任何应用创建一个轻�
 ### Docker 架构详解
 
 Docker 的核心组件包括：
-    - Docker 客户端 - Client
-    - Docker 服务器 - Docker daemon
-    - Docker 镜像 - Image
-    - Registry 镜像仓库
-    - Docker 容器 - Container
+- Docker 客户端 - Client
+- Docker 服务器 - Docker daemon
+- Docker 镜像 - Image
+- Registry 镜像仓库
+- Docker 容器 - Container
     
 Docker 架构如下图所示：
 
