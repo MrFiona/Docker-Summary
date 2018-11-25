@@ -216,5 +216,5 @@ docker kill     杀死一个或多个正在运行的容器
 docker restart  重新启动一个或多个容器
 docker rmi      删除一个或多个镜像
 docker logs     取得容器的日志
-    
+rename          重命名一个容器 
 ```
