@@ -140,3 +140,9 @@ docker history 会显示镜像的构建历史，也就是 Dockerfile 的执行�
 
 goujian:1.0 与 hub.yun.paic.com.cn/anbot-ci/tomcat:3.1 镜像相比，确实只是多了顶部的一层 c344d9f990ab，由 echo 命令创建，大小为 0B。docker history 也向我们展示了镜像的分层结构，每一层由上至下排列。
 <missing>标记的历史表示无法获取 IMAGE ID，通常从 Docker Hub 下载的镜像会有这个问题。
+
+### 镜像的缓存特性
+
+Docker 会缓存已有镜像的镜像层，构建新镜像时，如果某镜像层已经存在，就直接使用，无需重新创建。
+
+![构建历史2](/assets/构建历史2.PNG)
