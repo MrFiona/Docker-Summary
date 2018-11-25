@@ -210,10 +210,12 @@ docker tag      为镜像创建一个新的标签
 docker ps       列出所有容器     
 docker pause    暂停一个或多个容器的所有进程   
 docker unpause  恢复一个或多个容器内所有被暂停的进程   
+
 docker start    启动一个或多个已经停止运行的容器
 docker restart  重新启动一个或多个容器
 docker stop     停止一个或多个容器    
 docker rm       删除一个或多个容器
+
 docker kill     杀死一个或多个正在运行的容器   
 docker rmi      删除一个或多个镜像
 docker logs     取得容器的日志
