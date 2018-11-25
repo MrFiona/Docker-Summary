@@ -35,3 +35,5 @@ Docker daemon 是服务器组件，以 Linux 后台服务的方式运行。
 ```
 systemctl status docker.service
 ```
+
+Docker daemon 运行在 Docker host 上，负责创建、运行、监控容器，构建、存储镜像。
