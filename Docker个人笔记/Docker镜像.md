@@ -180,3 +180,5 @@ docker pull 命令输出显示第一层（base 镜像）已经存在，不需要
     5. 重复 2-4 步，直到 Dockerfile 中的所有指令执行完毕。
 
 ![Dockerfile调试](/assets/Dockerfile调试.PNG)
+
+Dockerfile 在执行第四步 RUN 指令时失败。我们可以利用第二步创建的镜像 22d31cc52b3e 进行调试，方式是通过 docker run -it 启动镜像的一个容器。
