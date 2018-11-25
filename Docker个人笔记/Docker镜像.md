@@ -211,9 +211,9 @@ docker save     将一个或多个镜像保存到tar存档
     $ docker save -o fedora-all.tar fedora
     $ docker save -o fedora-latest.tar fedora:latest
     $ docker save -o ubuntu.tar ubuntu:lucid ubuntu:saucy
+docker load
 
 docker export   将容器的文件系统导出为tar存档
-docker load
 docker import
 
 docker run      在一个新的容器中执行一条命令   
