@@ -31,6 +31,7 @@ Docker 采用的是 Client/Server 架构。客户端向服务器发送请求，�
 #### Docker 服务器
 
 Docker daemon 是服务器组件，以 Linux 后台服务的方式运行。
+
 ```
 systemctl status docker.service
 ```
