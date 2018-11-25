@@ -211,7 +211,7 @@ docker save     将一个或多个镜像保存到tar存档
     $ docker save -o fedora-all.tar fedora
     $ docker save -o fedora-latest.tar fedora:latest
     $ docker save -o ubuntu.tar ubuntu:lucid ubuntu:saucy
-docker load
+docker load     从tar存档或STDIN加载镜像
     $ docker image ls
     REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
     $ docker load < busybox.tar.gz
