@@ -35,3 +35,6 @@ Linux 操作系统由内核空间和用户空间组成。如下图所示：
 ② 启动并进入 CentOS 容器
 ③ 验证容器是 CentOS 7
 ④ 容器的 kernel 版本与 Host 一致
+
+容器只能使用 Host 的 kernel，并且不能修改。
+所有容器都共用 host 的 kernel，在容器中没办法对 kernel 升级。如果容器对 kernel 版本有要求（比如应用只能在某个 kernel 版本下运行），则不建议用容器，这种场景虚拟机可能更合适。
