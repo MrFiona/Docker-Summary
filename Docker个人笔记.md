@@ -16,5 +16,5 @@ Docker 的核心组件包括：
     - Registry 镜像仓库
     - Docker 容器 - Container
     
-
+Docker 架构如下图所示：
 
