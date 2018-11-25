@@ -63,7 +63,7 @@ Docker 容器就是 Docker 镜像的运行实例。
 
 Registry 是存放 Docker 镜像的仓库，Registry 分私有和公有两种。
 
-Docker Hub是默认的 Registry，由 Docker 公司维护，上面有数以万计的镜像，用户可以自由下载和使用。
+[Docker Hub](https://hub.docker.com/)是默认的 Registry，由 Docker 公司维护，上面有数以万计的镜像，用户可以自由下载和使用。
 
 出于对速度或安全的考虑，用户也可以创建自己的私有 Registry。后面我们会学习如何搭建私有 Registry。
 
