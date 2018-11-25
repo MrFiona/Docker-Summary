@@ -192,68 +192,28 @@ Dockerfile 在执行第四步 RUN 指令时失败。我们可以利用第三步�
 ![Dockerfile常用指令](/assets/Dockerfile常用指令.png)
 
 ```
-- docker build   
-    根据 Dockerfile 构建一个镜像
-    
-- docker images  
-    列出镜像
-
-- docker inspect
-
-- docker rm      
-    删除一个或多个容器
-    
-- docker search
-    在 Docker Hub 中搜索镜像
-    
-- docker push
-    推送一个镜像或仓库到 registry
-    
-- docker pull
-    拉取一个镜像或仓库到 registry    
-    
-- docker save
-
-- docker export
-
-- docker load
-
-- docker import
-
-- docker run
-    在一个新的容器中执行一条命令
-    
-- docker exec
-    在容器中执行一条命令
-    
-- docker attach
-    介入到一个正在运行的容器
-    
-- docker commit
-     根据容器的更改创建一个新的镜像
-    
-- docker tag
-    为镜像创建一个新的标签
-    
-- docker ps
-     列出所有容器
-     
-- docker pause
-    暂停一个或多个容器的所有进程
-    
-- docker unpause
-     恢复一个或多个容器内所有被暂停的进程
-    
-- docker start
-     启动一个或多个已经停止运行的容器
-    
-- docker kill
-    杀死一个或多个正在运行的容器 
-    
-- docker restart
-    重新启动一个或多个容器
-
-- docker rmi
-    删除一个或多个镜像
+docker build    根据 Dockerfile 构建一个镜像
+docker images   列出镜像
+docker inspect
+docker rm       删除一个或多个容器
+docker search   在 Docker Hub 中搜索镜
+docker push     推送一个镜像或仓库到 registry  
+docker pull     拉取一个镜像或仓库到 registry    
+docker save
+docker export
+docker load
+docker import
+docker run      在一个新的容器中执行一条命令   
+docker exec     在容器中执行一条命令   
+docker attach   介入到一个正在运行的容器    
+docker commit   根据容器的更改创建一个新的镜像
+docker tag      为镜像创建一个新的标签    
+docker ps       列出所有容器     
+docker pause    暂停一个或多个容器的所有进程   
+docker unpause  恢复一个或多个容器内所有被暂停的进程   
+docker start    启动一个或多个已经停止运行的容器    
+docker kill     杀死一个或多个正在运行的容器   
+docker restart  重新启动一个或多个容器
+docker rmi      删除一个或多个镜像
     
 ```
