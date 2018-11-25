@@ -161,3 +161,9 @@ Dockerfile 中每一个指令都会创建一个镜像层，上层是依赖于下
 除了构建时使用缓存，Docker 在下载镜像时也会使用。例如我们下载 httpd 镜像。
 
 ![Docker缓存](/assets/Docker缓存.PNG)
+
+docker pull 命令输出显示第一层（base 镜像）已经存在，不需要下载。
+
+由 Dockerfile 可知 httpd 的 base 镜像为 debian，正好之前已经下载过 debian 镜像，所以有缓存可用。通过 docker history 可以进一步验证。
+
+![Docker缓存2](/assets/Docker缓存2.PNG)
