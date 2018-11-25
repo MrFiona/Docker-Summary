@@ -212,6 +212,24 @@ docker save     将一个或多个镜像保存到tar存档
     $ docker save -o fedora-latest.tar fedora:latest
     $ docker save -o ubuntu.tar ubuntu:lucid ubuntu:saucy
 docker load
+    $ docker image ls
+    REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+    $ docker load < busybox.tar.gz
+    Loaded image: busybox:latest
+    $ docker images
+    REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+    busybox             latest              769b9341d937        7 weeks ago         2.489 MB
+    $ docker load --input fedora.tar
+    Loaded image: fedora:rawhide
+    Loaded image: fedora:20
+    $ docker images
+
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+busybox             latest              769b9341d937        7 weeks ago         2.489 MB
+fedora              rawhide             0d20aec6529d        7 weeks ago         387 MB
+fedora              20                  58394af37342        7 weeks ago         385.5 MB
+fedora              heisenbug           58394af37342        7 weeks ago         385.5 MB
+fedora              latest              58394af37342        7 weeks ago         385.5 MB
 
 docker export   将容器的文件系统导出为tar存档
 docker import
