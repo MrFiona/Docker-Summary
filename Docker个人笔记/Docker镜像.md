@@ -187,3 +187,6 @@ Dockerfile 在执行第四步 RUN 指令时失败。我们可以利用第三步�
 
 ### Dockerfile 常用指令
 
+我们可以通过 docker -h 去查看命令的详细的帮助文档。在这里我只会讲一些日常我们可能会用的比较多的一些命令。
+
+![Dockerfile常用指令](/assets/Dockerfile常用指令.png)
