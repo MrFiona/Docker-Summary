@@ -214,6 +214,7 @@ docker ps       列出所有容器
 docker pause    暂停一个或多个容器的所有进程   
 docker unpause  恢复一个或多个容器内所有被暂停的进程   
 
+docker create   创建容器
 docker start    启动一个或多个已经停止运行的容器
 docker restart  重新启动一个或多个容器
 docker stop     停止一个或多个容器    
