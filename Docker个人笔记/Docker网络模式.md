@@ -110,7 +110,8 @@ $ route -n
 ## None模式
 使用`none`模式，Docker 容器拥有自己的 Network Namespace，但是，并不为Docker 容器进行任何网络配置。也就是说，这个 Docker 容器没有网卡、IP、路由等信息。需要我们自己为 Docker 容器添加网卡、配置 IP 等。
 None模式示意图:
-![network none](./images/docker-network-none.jpeg)
+
+![network none](/assets/docker-network-none.jpeg)
 ​​
 演示：
 ```shell
