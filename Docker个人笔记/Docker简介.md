@@ -24,7 +24,7 @@
 * 一个用来和 Dockerd 交互的 REST API Server
 * 命令行`CLI`接口，通过和 REST API 进行交互（我们经常使用的 docker 命令）
 
-![docker engine](./images/docker-engine.png)
+![docker engine](/assets/docker-engine.png)
 ​​
 
 ## Docker 架构
