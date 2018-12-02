@@ -5,7 +5,7 @@ Docker 可以通过从 Dockerfile 包含所有命令的文本文件中读取指�
 
 Dockerfiles 使用特定的格式并使用一组特定的指令。您可以在[Dockerfile Reference](https://docs.docker.com/engine/reference/builder/)页面上了解基础知识 。如果你是新手写作`Dockerfile`，你应该从那里开始。
 
-本文档介绍了由 Docker，Inc. 和 Docker 社区推荐的用于构建高效镜像的最佳实践和方法。要查看许多实践和建议，请查看[Dockerfile for buildpack-deps](https://github.com/docker-library/buildpack-deps/blob/master/jessie/Dockerfile)。
+本文档介绍了由 Docker，Inc. 和 Docker 社区推荐的用于构建高效镜像的最佳实践和方法。
 
 ## 一般准则和建议
 
