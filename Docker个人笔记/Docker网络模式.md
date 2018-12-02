@@ -92,7 +92,8 @@ $ route –n
 ## Container 模式
 这个模式指定新创建的容器和已经存在的一个容器共享一个 Network Namespace，而不是和宿主机共享。新创建的容器不会创建自己的网卡，配置自己的 IP，而是和一个指定的容器共享 IP、端口范围等。同样，两个容器除了网络方面，其他的如文件系统、进程列表等还是隔离的。两个容器的进程可以通过 lo 网卡设备通信。
 Container模式示意图：
-![network container](./images/docker-network-container.jpeg)
+
+![network container](/assets/docker-network-container.jpeg)
 ​​
 演示：
 ```shell
