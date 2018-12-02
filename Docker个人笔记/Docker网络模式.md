@@ -75,7 +75,7 @@ PING busybox1 (172.19.0.2): 56 data bytes
 如果启动容器的时候使用`host`模式，那么这个容器将不会获得一个独立的`Network Namespace`，而是和宿主机共用一个 Network Namespace。容器将不会虚拟出自己的网卡，配置自己的 IP 等，而是使用宿主机的 IP 和端口。但是，容器的其他方面，如文件系统、进程列表等还是和宿主机隔离的。
 Host模式如下图所示：
 
-​​![network host](./images/docker-network-host.jpeg)
+![network host](/assets/docker-network-host.jpeg)
 
 演示：
 ```shell
