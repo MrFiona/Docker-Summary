@@ -25,7 +25,6 @@
 Docker 安装时会创建一个命名为 docker0 的 linux bridge。如果不指定--network，创建的容器默认都会挂到 docker0 上。
 
 
-
 我们创建一个容器看看有什么变化。
 
 一个新的网络接口 veth28c57df 被挂到了 docker0 上，veth28c57df就是新创建容器的虚拟网卡。
