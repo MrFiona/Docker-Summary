@@ -16,7 +16,7 @@
 
 ![host网络](/assets/host网络-1.PNG)
 
-在容器中可以看到 host 的所有网卡，并且连 hostname 也是 host 的。host 网络的使用场景又是什么呢？
+在容器中可以看到 host 的所有网卡，并且连 hostname 也是 host 的。
 
 直接使用 Docker host 的网络最大的好处就是性能，如果容器对网络传输效率有较高要求，则可以选择 host 网络。当然不便之处就是牺牲一些灵活性，比如要考虑端口冲突问题，Docker host 上已经使用的端口就不能再用了。
 
