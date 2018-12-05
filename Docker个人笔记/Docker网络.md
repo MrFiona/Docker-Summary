@@ -12,3 +12,6 @@
 
 ## host 网络
 
+连接到 host 网络的容器共享 Docker host 的网络栈，容器的网络配置与 host 完全一样。可以通过 --network=host 指定使用 host 网络。
+
+![host网络](/assets/host网络.PNG)
