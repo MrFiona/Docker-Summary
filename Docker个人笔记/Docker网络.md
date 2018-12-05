@@ -77,7 +77,11 @@ Docker 提供三种 user-defined 网络驱动：bridge, overlay 和 macvlan。ov
 
 容器要使用新的网络，需要在启动时通过 --network 指定：
 
+![自定义网络6](/assets/自定义网络6.PNG)
 
+容器分配到的 IP 为 172.22.16.2。
+
+到目前为止，容器的 IP 都是 docker 自动从 subnet 中分配，我们也可以通过--ip指定一个静态 IP。
 
 
 
