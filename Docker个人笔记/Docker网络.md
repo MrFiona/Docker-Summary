@@ -85,6 +85,18 @@ Docker 提供三种 user-defined 网络驱动：bridge, overlay 和 macvlan。ov
 
 ![自定义网络7](/assets/自定义网络7.PNG)
 
+> 注：只有使用 --subnet 创建的网络才能指定静态 IP。
+
+zp_net 创建时没有指定 --subnet，如果指定静态 IP 报错如下：
+
+![自定义网络8](/assets/自定义网络8.PNG)
+
+
+
+
+
+
+
 
 
 
