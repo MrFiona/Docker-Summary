@@ -40,3 +40,5 @@ Docker 安装时会创建一个命名为 docker0 的 linux bridge。如果不指
 ![bridge网络3](/assets/bridge网络3.PNG)
 
 原来 bridge 网络配置的 subnet 就是 172.17.0.0/16，并且网关是 172.17.0.1。这个网关在哪儿呢？大概你已经猜出来了，就是 docker0。
+
+![bridge网络4](/assets/bridge网络4.PNG)
