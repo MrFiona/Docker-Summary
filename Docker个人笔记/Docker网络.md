@@ -69,7 +69,9 @@ Docker 提供三种 user-defined 网络驱动：bridge, overlay 和 macvlan。ov
 
 这里 172.18.0.0/16 是 Docker 自动分配的 IP 网段。当然也可以指定IP网段，只需在创建网段时指定 --subnet 和 --gateway 参数：
 
+![自定义网络4](/assets/自定义网络4.PNG)
 
+这里我们创建了新的 bridge 网络 zp_net2，网段为 172.22.16.0/24，网关为 172.22.16.1。与前面一样，网关在 zp_net2 对应的网桥 br-9244654a9f6f 上：
 
 
 
