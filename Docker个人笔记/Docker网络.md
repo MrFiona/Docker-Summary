@@ -38,3 +38,5 @@ Docker 安装时会创建一个命名为 docker0 的 linux bridge。如果不指
 我们还看到 eth0@if2744 已经配置了 IP 172.17.0.4，为什么是这个网段呢？让我们通过 docker network inspect bridge 看一下 bridge 网络的配置信息:
 
 ![bridge网络3](/assets/bridge网络3.PNG)
+
+原来 bridge 网络配置的 subnet 就是 172.17.0.0/16，并且网关是 172.17.0.1。这个网关在哪儿呢？大概你已经猜出来了，就是 docker0。
