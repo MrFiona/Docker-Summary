@@ -83,6 +83,8 @@ Docker 提供三种 user-defined 网络驱动：bridge, overlay 和 macvlan。ov
 
 到目前为止，容器的 IP 都是 docker 自动从 subnet 中分配，我们也可以通过--ip指定一个静态 IP。
 
+![自定义网络7](/assets/自定义网络7.PNG)
+
 
 
 
