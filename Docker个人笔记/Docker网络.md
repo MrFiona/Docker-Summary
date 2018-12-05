@@ -95,6 +95,8 @@ zp_net 创建时没有指定 --subnet，如果指定静态 IP 报错如下：
 
 ![自定义网络9](/assets/自定义网络-9.PNG)
 
+当前 docker host 的网络拓扑结构如下图:
+
 ![自定义网络11](/assets/自定义网络11.PNG)
 
 
