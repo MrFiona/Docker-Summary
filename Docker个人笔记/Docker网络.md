@@ -49,6 +49,14 @@ Docker 安装时会创建一个命名为 docker0 的 linux bridge。如果不指
 
 容器创建时，docker 会自动从 172.17.0.0/16 中分配一个 IP，这里 16 位的掩码保证有足够多的 IP 可以供容器使用。
 
+## user-defined 网络
+
+除了 none, host, bridge 这三个自动创建的网络，用户也可以根据业务需要创建 user-defined 网络。
+
+Docker 提供三种 user-defined 网络驱动：bridge, overlay 和 macvlan。overlay 和 macvlan 用于创建跨主机的网络，我们后面有章节单独讨论。
+
+我们可通过 bridge 驱动创建类似前面默认的 bridge 网络，例如：
+
 ## 容器间通信
 
 容器之间可通过 IP，Docker DNS Server 或 joined 容器三种方式通信。
