@@ -57,6 +57,22 @@ Docker 提供三种 user-defined 网络驱动：bridge, overlay 和 macvlan。ov
 
 我们可通过 bridge 驱动创建类似前面默认的 bridge 网络，例如：
 
+![自定义网络1](/assets/自定义网络1.PNG)
+
+查看一下当前 host 的网络结构变化：
+
+![自定义网络2](/assets/自定义网络2.PNG)
+
+新增了一个网桥 br-f74dcd35e69b，这里 f74dcd35e69b 正好新建 bridge 网络 zp_net 的短 id。执行 docker network inspect 查看一下 zp_net 的配置信息：
+
+![自定义网络3](/assets/自定义网络3.PNG)
+
+这里 172.18.0.0/16 是 Docker 自动分配的 IP 网段。当然也可以指定IP网段，只需在创建网段时指定 --subnet 和 --gateway 参数：
+
+
+
+
+
 
 
 ## 容器间通信
