@@ -48,3 +48,5 @@ Docker 安装时会创建一个命名为 docker0 的 linux bridge。如果不指
 
 容器创建时，docker 会自动从 172.17.0.0/16 中分配一个 IP，这里 16 位的掩码保证有足够多的 IP 可以供容器使用。
 
+![bridge网络5](/assets/bridge网络5.png)
+
