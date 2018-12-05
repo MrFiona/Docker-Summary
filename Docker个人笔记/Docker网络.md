@@ -28,8 +28,6 @@ Docker 安装时会创建一个命名为 docker0 的 linux bridge。如果不指
 
 ![bridge网络1](/assets/bridge网络1.PNG)
 
-我们创建一个容器看看有什么变化。
-
 一个新的网络接口 veth28c57df 被挂到了 docker0 上，veth28c57df就是新创建容器的虚拟网卡。
 
 下面看一下容器的网络配置。
