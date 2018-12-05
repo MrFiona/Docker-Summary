@@ -33,7 +33,4 @@ Docker 安装时会创建一个命名为 docker0 的 linux bridge。如果不指
 
 实际上 eth0@if2744 和 veth37e6429 是一对 veth pair。veth pair 是一种成对出现的特殊网络设备，可以把它们想象成由一根虚拟网线连接起来的一对网卡，网卡的一头（eth0@if2744）在容器中，另一头（veth37e6429）挂在网桥 docker0 上，其效果就是将 eth0@if2744 也挂在了 docker0 上。
 
-
-
-
-
+![bridge网络2](/assets/bridge网络2.PNG)
