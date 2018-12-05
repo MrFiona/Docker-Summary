@@ -54,6 +54,7 @@ Docker 安装时会创建一个命名为 docker0 的 linux bridge。如果不指
 容器之间可通过 IP，Docker DNS Server 或 joined 容器三种方式通信。
 
 ### IP 通信
+
 从上一节的例子可以得出这样一个结论：两个容器要能通信，必须要有属于同一个网络的网卡。
 
 满足这个条件后，容器就可以通过 IP 交互了。具体做法是在容器创建时通过 --network 指定相应的网络，或者通过 docker network connect 将现有容器加入到指定网络。可参考上一节 httpd 和 busybox 的例子，这里不再赘述。
