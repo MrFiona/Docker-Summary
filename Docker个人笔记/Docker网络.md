@@ -73,6 +73,12 @@ Docker 提供三种 user-defined 网络驱动：bridge, overlay 和 macvlan。ov
 
 这里我们创建了新的 bridge 网络 zp_net2，网段为 172.22.16.0/24，网关为 172.22.16.1。与前面一样，网关在 zp_net2 对应的网桥 br-9244654a9f6f 上：
 
+![自定义网络5](/assets/自定义网络5.PNG)
+
+容器要使用新的网络，需要在启动时通过 --network 指定：
+
+
+
 
 
 
