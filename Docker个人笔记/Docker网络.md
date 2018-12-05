@@ -23,3 +23,5 @@
 ## bridge 网络
 
 Docker 安装时会创建一个命名为 docker0 的 linux bridge。如果不指定--network，创建的容器默认都会挂到 docker0 上。
+
+![bridge网络-1](/assets/bridge网络-1.PNG)
