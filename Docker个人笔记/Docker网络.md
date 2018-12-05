@@ -116,22 +116,6 @@ zp_net 创建时没有指定 --subnet，如果指定静态 IP 报错如下：
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ## 容器间通信
 
 容器之间可通过 IP，Docker DNS Server 或 joined 容器三种方式通信。
