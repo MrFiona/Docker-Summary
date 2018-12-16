@@ -165,4 +165,7 @@ volume container 是专门为其他容器提供 volume 的容器。它提供的�
 
 可见，三个容器已经成功共享了 volume container 中的 volume。
 
+下面我们讨论一下 volume container 的特点：
 
+- 与 bind mount 相比，不必为每一个容器指定 host path，所有 path 都在 volume container 中定义好了，容器只需与 volume container 关联，实现了容器与 host 的解耦。
+- 使用 volume container 的容器其 mount point 是一致的，有利于配置的规范和标准化，但也带来一定的局限，使用时需要综合考虑。
