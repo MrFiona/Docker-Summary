@@ -74,4 +74,4 @@ mount point 有很多应用场景，比如我们可以将源代码目录 mount �
 
 bind mount 的使用直观高效，易于理解，但它也有不足的地方：bind mount 需要指定 host 文件系统的特定路径，这就限制了容器的可移植性，当需要将容器迁移到其他 host，而该 host 没有要 mount 的数据或者数据不在相同的路径时，操作会失败。
 
-移植性更好的方式是 docker managed volume，下一节我们讨论
+移植性更好的方式是 docker managed volume。
