@@ -106,3 +106,17 @@ docker managed volume 的创建过程：
 ![docker-managed-volume-3](/assets/docker-managed-volume-4.PNG)
 
 目前，docker volume 只能查看 docker managed volume，还看不到 bind mount；同时也无法知道 volume 对应的容器，这些信息还得靠docker inspect。
+
+|  | bind mount | docker managed volume |
+| :------| ------: | :------: |
+| volume 位置 | 可任意指定 | /var/lib/docker/volumes/... |
+| 对已有mount point 影响	 | 隐藏并替换为 volume | 原有数据复制到 volume |
+| 是否支持单个文件 | 支持 | 不支持，只能是目录 |
+| 权限控制 | 可设置为只读，默认为读写权限 | 无控制，均为读写权限 |
+| 移植性 | 移植性弱，与 host path 绑定 | 移植性强，无需指定 host 目录 |
+
+
+
+
+
+
