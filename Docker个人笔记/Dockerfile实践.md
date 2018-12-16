@@ -204,7 +204,7 @@ RUN curl -SL http://example.com/postgres-$PG_VERSION.tar.xz | tar -xJC /usr/src/
 类似于程序中的常量，这种方法可以让你只需改变 ENV 指令来自动的改变容器中的软件版本。
 
 ### ADD 和 COPY
-虽然`ADD`和`COPY`功能类似，但一般优先使用 COPY。因为它比 ADD 更透明。COPY 只支持简单将本地文件拷贝到容器中，而 ADD 有一些并不明显的功能（比如本地 tar 提取和远程 URL 支持）。因此，ADD的最佳用例是将本地 tar 文件自动提取到镜像中，例如**ADD rootfs.tar.xz**。
+虽然`ADD`和`COPY`功能类似，但一般优先使用 COPY。因为它比 ADD 更透明。COPY 只支持简单将本地文件拷贝到容器中，而 ADD 有一些并不明显的功能（比如本地 tar 提取和远程 URL 支持）。因此，ADD的最佳用例是将本地 tar 文件自动提取到镜像中，例如**ADD rootfs.tar.xz**，如果是归档文件(tar,zip,tgz,xz等)，文件会被自动解压到dest。
 
 如果你的 Dockerfile 有多个步骤需要使用上下文中不同的文件。单独 COPY 每个文件，而不是一次性的 COPY 所有文件，这将保证每个步骤的构建缓存只在特定的文件变化时失效。例如：
 ```docker
