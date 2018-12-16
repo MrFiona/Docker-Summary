@@ -81,3 +81,14 @@ bind mount 的使用直观高效，易于理解，但它也有不足的地方：
 docker managed volume 与 bind mount 在使用上的最大区别是不需要指定 mount 源，指明 mount point 就行了。以 tomcat 容器为例：
 
 我们通过 -v 告诉 docker 需要一个 data volume，并将其 mount 到 /usr/local/tomcat/logs。data volume 可以在容器的配置信息中找到，执行 docker inspect 命令：
+
+![docker-managed-volume-1](/assets/docker-managed-volume-1.PNG)
+
+
+![docker-managed-volume-1](/assets/docker-managed-volume-2.PNG)
+
+
+
+
+
+
