@@ -9,5 +9,6 @@
   * [Dockerfile实践](Docker个人笔记/Dockerfile实践.md)
   * [数据共享与持久化](Docker个人笔记/数据共享与持久化.md)
   * [Docker网络](Docker个人笔记/Docker网络.md)
+  * [Docker存储](Docker个人笔记/Docker存储.md)
   * [Docker Compose](Docker个人笔记/Docker Compose.md)
 
