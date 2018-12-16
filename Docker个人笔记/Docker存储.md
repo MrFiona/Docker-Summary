@@ -58,4 +58,5 @@ Data Volume 本质上是 Docker Host 文件系统中的目录或文件，能够�
 
 bind mount 是将 host 上已存在的目录或文件 mount 到容器。
 
--v 的格式为 `<host path>:<container path>`。/usr/local/apache2/htdocs 就是 apache server 存放静态文件的地方。由于 /usr/local/apache2/htdocs 已经存在，原有数据会被隐藏起来，取而代之的是 host $HOME/htdocs/ 中的数据，这与 linux mount 命令的行为是一致的。
+-v 的格式为 `<host path>:<container path>`, /usr/local/tomcat/logs。由于 /usr/local/tomcat/logs 已经存在，原有数据会被隐藏起来，取而代之的是 host /docker-test 中的数据，这与 linux mount 命令的行为是一致的。
+
