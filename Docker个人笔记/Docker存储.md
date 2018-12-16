@@ -121,6 +121,20 @@ docker managed volume 的创建过程：
     | 权限控制 | 可设置为只读，默认为读写权限 | 无控制，均为读写权限 |
     | 移植性 | 移植性弱，与 host path 绑定 | 移植性强，无需指定 host 目录 |
     
+### 数据共享
+
+数据共享是 volume 的关键特性，本节我们详细讨论通过 volume 如何在容器与 host 之间，容器与容器之间共享数据。
+
+#### 容器与 host 共享数据
+
+我们有两种类型的 data volume，它们均可实现在容器与 host 之间共享数据，但方式有所区别。
+
+对于 bind mount 是非常明确的：直接将要共享的目录 mount 到容器。具体请参考前面 tomcat的例子，不再赘述。
+
+docker managed volume 就要麻烦点。由于 volume 位于 host 中的目录，是在容器启动时才生成，所以需要将共享数据拷贝到 volume 中。
+
+![数据共享-1](/assets/数据共享-1.PNG)
+
 
 
 
