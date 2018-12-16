@@ -26,8 +26,6 @@
 
 bridge模式是 docker 的默认网络模式，不写–net参数，就是bridge模式。使用docker run -p时，docker 实际是在iptables做了DNAT规则，实现端口转发功能。可以使用iptables -t nat -S查看
 
-Docker 安装时会创建一个命名为 docker0 的 linux bridge。如果不指定--network，创建的容器默认都会挂到 docker0 上。
-
 下面以当创建一个容器为例讲解过程:
 
 ![bridge网络1](/assets/bridge网络1.PNG)
