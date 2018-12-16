@@ -60,3 +60,5 @@ bind mount 是将 host 上已存在的目录或文件 mount 到容器。
 
 -v 的格式为 `<host path>:<container path>`, /usr/local/tomcat/logs。由于 /usr/local/tomcat/logs 已经存在，原有数据会被隐藏起来，取而代之的是 host /docker-test 中的数据，这与 linux mount 命令的行为是一致的。
 
+host 中的修改确实生效了，bind mount 可以让 host 与容器共享数据。这在管理上是非常方便的。
+
