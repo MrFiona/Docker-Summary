@@ -135,6 +135,17 @@ docker managed volume 就要麻烦点。由于 volume 位于 host 中的目录�
 
 ![数据共享-1](/assets/数据共享-1.PNG)
 
+docker cp 可以在容器和 host 之间拷贝数据，当然我们也可以直接通过 Linux 的 cp 命令复制到 /var/lib/docker/volumes/xxx。
+
+#### 容器之间共享数据
+
+第一种方法是将共享数据放在 bind mount 中，然后将其 mount 到多个容器。还是以 tomcat 为例，不过这次的场景复杂些，我们要创建三个 tomcat 容器组，它们挂在同一个主机目录，如下图所示：
+
+![数据共享-2](/assets/数据共享-2.PNG)
+
+
+
+
 
 
 
