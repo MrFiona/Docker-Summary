@@ -94,6 +94,12 @@ Source 就是该 volume 在 host 上的目录。
 
 ![docker-managed-volume-3](/assets/docker-managed-volume-3.PNG)
 
+docker managed volume 的创建过程：
 
+1. 容器启动时，简单的告诉 docker "我需要一个 volume 存放数据，帮我 mount 到目录 /abc"。
+2. docker 在 /var/lib/docker/volumes 中生成一个随机目录作为 mount 源。
+3. 如果 /abc 已经存在，则将数据复制到 mount 源，
+4. 将 volume mount 到 /abc
 
+除了通过 docker inspect 查看 volume，我们也可以用 docker volume 命令：
 
