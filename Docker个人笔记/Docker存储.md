@@ -65,3 +65,6 @@ bind mount 是将 host 上已存在的目录或文件 mount 到容器。
 host 中的修改确实生效了，bind mount 可以让 host 与容器共享数据。这在管理上是非常方便的。
 
 ![datavolume-1](/assets/datavolume-2.PNG)
+
+即使容器没有了，bind mount 也还在，bind mount 是 host 文件系统中的数据。
+
