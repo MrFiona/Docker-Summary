@@ -215,6 +215,4 @@ docker 不会销毁 bind mount，删除数据的工作只能由 host 负责。�
 
 ![数据共享-10](/assets/数据共享-10.PNG)
 
-如果想批量删除孤儿 volume，可以执行：
-
-docker volume rm $(docker volume ls -q)
+`如果想批量删除孤儿 volume，可以执行：docker volume rm $(docker volume ls -q)`
