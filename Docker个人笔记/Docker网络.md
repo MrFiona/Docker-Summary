@@ -158,6 +158,8 @@ zp_net 创建时没有指定 --subnet，如果指定静态 IP 报错如下：
 
 docker0收到centos的ping包，源地址为容器的IP 172.1.167.3，交给MASQUERADE处理，这时，在eth0上我们看到了变化，如下图所示：
 
+![NAT规则](/assets/eth0ping包.PNG)
+
 ping包的源地址变成了eth0的IP 10.25.73.60，这就是iptable NAT规则处理的结果，从而保证数据包能够到达外网。
 
 1. centos发送ping包：172.1.167.3->10.25.80.224
