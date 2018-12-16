@@ -141,7 +141,7 @@ zp_net 创建时没有指定 --subnet，如果指定静态 IP 报错如下：
 
 ![自定义网络13](/assets/NAT规则.PNG)
 
-其含义是：如果网桥docker0收到来自172.17.0.0/16网段的外出包，把它交给MASQUERADE处理。而MASQUERADE的处理方式则是将包的源地址替换成host的地址发送出去，即做一次网络地址转换(NAT)。
+其含义是：如果网桥docker0收到来自172.1.167.0/24网段的外出包，把它交给MASQUERADE处理。而MASQUERADE的处理方式则是将包的源地址替换成host的地址发送出去，即做一次网络地址转换(NAT)。
 
 下面我们通过tcpdump查看地址是如何转换的，先查看docker host的路由表，如下图所示：
 
