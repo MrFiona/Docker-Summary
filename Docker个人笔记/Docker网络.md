@@ -134,6 +134,8 @@ zp_net 创建时没有指定 --subnet，如果指定静态 IP 报错如下：
 
 下面模拟容器访问外部网络的过程
 
+![自定义网络13](/assets/容器ping外网.PNG)
+
 查看docker host上的iptables规则，如下图所示：
 在NAT表中，又这么一条规则：
 
