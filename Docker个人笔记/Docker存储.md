@@ -38,4 +38,12 @@ Docker 安装时会根据当前系统的配置选择默认的 driver。默认 dr
 
 但对于另一类应用这种方式就不合适了，它们有持久化数据的需求，容器启动时需要加载已有的数据，容器销毁时希望保留产生的新数据，也就是说，这类容器是有状态的。
 
-这就要用到 Docker 的另一种存储机制：Data Volume，下一节我们讨论。
+这就要用到 Docker 的另一种存储机制：Data Volume。
+
+## Data Volume
+
+Data Volume 本质上是 Docker Host 文件系统中的目录或文件，能够直接被 mount 到容器的文件系统中。Data Volume 有以下特点：
+
+- Data Volume 是目录或文件，而非没有格式化的磁盘（块设备）。
+- 容器可以读写 volume 中的数据。
+- volume 数据可以被永久的保存，即使使用它的容器已经销毁。
