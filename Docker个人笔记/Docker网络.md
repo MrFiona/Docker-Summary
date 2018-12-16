@@ -134,6 +134,22 @@ zp_net 创建时没有指定 --subnet，如果指定静态 IP 报错如下：
 
 下面模拟容器访问外部网络的过程
 
+查看docker host上的iptables规则，如下图所示：
+
+![NAT](/assets/NAT.PNG)
+
 在NAT表中，又这么一条规则：
 
 其含义是：如果网桥docker0收到来自172.17.0.0/16网段的外出包，把它交给MASQUERADE处理。而MASQUERADE的处理方式则是将包的源地址替换成host的地址发送出去，即做一次网络地址转换(NAT)。
+
+下面我们通过tcpdump查看地址是如何转换的，先查看docker host的路由表，如下图所示：
+
+默认路由通过eth0发出去，所以我们要同时监控eth0和docker0上的icmp(ping)数据包。
+
+当centos ping 10.25.80.224时，tcpdump输出如下：
+
+docker0收到centos的ping包，源地址为容器的IP 172.17.0.2，交给MASQUERADE处理，这时，在eth0上我们看到了变化，如下图所示：
+
+ping包的源地址变成了eth0的IP 10.25.73.60，这就是iptable NAT规则处理的结果，从而保证数据包能够到达外网。
+
+1. centos发送ping包：
