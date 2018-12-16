@@ -84,10 +84,13 @@ docker managed volume 与 bind mount 在使用上的最大区别是不需要指�
 
 ![docker-managed-volume-1](/assets/docker-managed-volume-1.PNG)
 
-
 ![docker-managed-volume-1](/assets/docker-managed-volume-2.PNG)
 
+这里会显示容器当前使用的所有 data volume，包括 bind mount 和 docker managed volume。type为volume则为docker managed volume类型，type为bind则为bind mount类型。
 
+Source 就是该 volume 在 host 上的目录。
+
+每当容器申请 mount docker manged volume 时，docker 都会在/var/lib/docker/volumes 下生成一个目录，这个目录就是 mount 源。
 
 
 
