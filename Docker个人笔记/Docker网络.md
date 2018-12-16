@@ -176,4 +176,7 @@ dockerk可将容器对外提供服务的端口映射到host的某个端口上，
 
 ![映射端口1](/assets/映射端口1.PNG)
 
+容器启动后，可通过 docker ps 或者 docker port 查看到 host 映射的端口。在上面的例子中，httpd 容器的 80 端口被映射到 host 32773 上，这样就可以通过 `host ip:32773` 访问容器的 web 服务了。
+
+
 
