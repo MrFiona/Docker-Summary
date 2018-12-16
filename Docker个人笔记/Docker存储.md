@@ -215,8 +215,6 @@ docker 不会销毁 bind mount，删除数据的工作只能由 host 负责。�
 
 ![数据共享-10](/assets/数据共享-10.PNG)
 
+如果想批量删除孤儿 volume，可以执行：
 
-
-容器 bbox 使用的 docker managed volume 可以通过 docker volume ls 查看到。因为没有使用 -v，volume 遗留了下来。对于这样的孤儿 volume，可以用 docker volume rm 删除
-
-
+docker volume rm $(docker volume ls -q)
