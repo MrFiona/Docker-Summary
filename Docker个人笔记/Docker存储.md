@@ -68,3 +68,10 @@ host 中的修改确实生效了，bind mount 可以让 host 与容器共享数�
 
 即使容器没有了，bind mount 也还在，bind mount 是 host 文件系统中的数据，不会随着容器的消失而不存在。
 
+`使用单一文件有一点要注意：host 中的源文件必须要存在，不然会当作一个新目录 bind mount 给容器。`
+
+mount point 有很多应用场景，比如我们可以将源代码目录 mount 到容器中，在 host 中修改代码就能看到应用的实时效果。再比如将 mysql 容器的数据放在 bind mount 里，这样 host 可以方便地备份和迁移数据。
+
+bind mount 的使用直观高效，易于理解，但它也有不足的地方：bind mount 需要指定 host 文件系统的特定路径，这就限制了容器的可移植性，当需要将容器迁移到其他 host，而该 host 没有要 mount 的数据或者数据不在相同的路径时，操作会失败。
+
+移植性更好的方式是 docker managed volume，下一节我们讨论
