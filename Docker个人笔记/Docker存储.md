@@ -49,3 +49,13 @@ Data Volume 本质上是 Docker Host 文件系统中的目录或文件，能够�
 - volume 数据可以被永久的保存，即使使用它的容器已经销毁。
 
 `现在我们有数据层（镜像层和容器层）和 volume 都可以用来存放数据，前者放在数据层中。因为这部分内容是无状态的，应该作为镜像的一部分；后者放在 Data Volume 中。这是需要持久化的数据，并且应该与镜像分开存放。`
+
+因为 volume 实际上是 docker host 文件系统的一部分，所以 volume 的容量取决于文件系统当前未使用的空间，目前还没有方法设置 volume 的容量。
+
+在具体的使用上，docker 提供了两种类型的 volume：bind mount 和 docker managed volume。
+
+### bind mount
+
+bind mount 是将 host 上已存在的目录或文件 mount 到容器。
+
+-v 的格式为 `<host path>:<container path>`。/usr/local/apache2/htdocs 就是 apache server 存放静态文件的地方。由于 /usr/local/apache2/htdocs 已经存在，原有数据会被隐藏起来，取而代之的是 host $HOME/htdocs/ 中的数据，这与 linux mount 命令的行为是一致的。
