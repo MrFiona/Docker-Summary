@@ -88,6 +88,10 @@ RUN apt-get update && apt-get install -y \
 ### FROM
 尽可能使用当前官方仓库作为你构建镜像的基础。推荐使用[Alpine](https://hub.docker.com/_/alpine/)镜像，因为它被严格控制并保持最小尺寸（目前小于 5 MB），但它仍然是一个完整的发行版。
 
+### MAINTAINER
+
+设置镜像的作者，可以是任意的字符串。
+
 ### LABEL
 你可以给镜像添加标签来帮助组织镜像、记录许可信息、辅助自动化构建等。每个标签一行，由 LABEL 开头加上一个或多个标签对。
 
