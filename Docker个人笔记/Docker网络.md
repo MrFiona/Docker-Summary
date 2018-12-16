@@ -134,11 +134,11 @@ zp_net 创建时没有指定 --subnet，如果指定静态 IP 报错如下：
 
 下面模拟容器访问外部网络的过程
 
-![自定义网络13](/assets/容器ping外网.PNG)
+![容器ping外网](/assets/容器ping外网.PNG)
 
 这里关键是NAT，我们查看下docker host上的iptables规则，如下图所示：
 
-![自定义网络13](/assets/NAT规则.PNG)
+![NAT规则](/assets/NAT规则.PNG)
 
 在NAT表中，有如下一条规则：
 
@@ -148,7 +148,7 @@ zp_net 创建时没有指定 --subnet，如果指定静态 IP 报错如下：
 
 下面我们通过tcpdump查看地址是如何转换的，先查看docker host的路由表，如下图所示：
 
-
+![iptables规则](/assets/iptables规则.PNG)
 
 默认路由通过eth0发出去，所以我们要同时监控eth0和docker0上的icmp(ping)数据包。
 
