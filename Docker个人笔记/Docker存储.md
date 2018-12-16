@@ -145,7 +145,12 @@ docker cp 可以在容器和 host 之间拷贝数据，当然我们也可以直�
 
 `**结论：当主机的mount目录发生变化时，三个容器的目录发生了变化；当其中一个容器的目录发生了变化时，另外两个容器以及主机mount目录都发生了变化。**`
 
+### volume container
 
+volume container 是专门为其他容器提供 volume 的容器。它提供的卷可以是 bind mount，也可以是 docker managed volume。下面我们创建一个 volume container：
+
+
+我们将容器命名为 vc_data（vc 是 volume container 的缩写）。注意这里执行的是 docker create 命令，这是因为 volume container 的作用只是提供数据，它本身不需要处于运行状态。容器 mount 了两个 volume：
 
 
 
