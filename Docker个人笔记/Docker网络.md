@@ -154,6 +154,8 @@ zp_net 创建时没有指定 --subnet，如果指定静态 IP 报错如下：
 
 当centos ping 10.25.80.224时，tcpdump输出如下：
 
+![NAT规则](/assets/docker0 ping包.PNG)
+
 
 
 docker0收到centos的ping包，源地址为容器的IP 172.1.167.3，交给MASQUERADE处理，这时，在eth0上我们看到了变化，如下图所示：
