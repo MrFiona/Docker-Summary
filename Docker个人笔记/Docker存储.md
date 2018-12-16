@@ -187,3 +187,36 @@ VOLUME 的作用与 -v 等效，用来创建 docker managed volume，mount point
 
 容器能够正确读取 volume 中的数据。data-packed volume container 是自包含的，不依赖 host 提供数据，具有很强的移植性，非常适合 只适用静态文件的场景，比如应用的配置信息、web server 的静态文件等。
 
+### volume 生命周期管理
+
+Data Volume 中存放的是重要的应用数据，如何管理 volume 对应用至关重要。前面我们主要关注的是 volume 的创建、共享和使用，本节将讨论如何备份、恢复、迁移和销毁 volume。
+
+#### 备份
+
+因为 volume 实际上是 host 文件系统中的目录和文件，所以 volume 的备份实际上是对文件系统的备份。
+
+#### 恢复
+
+volume 的恢复也很简单，如果数据损坏了，直接用之前备份的数据恢复就可以了。
+
+#### 迁移
+
+#### 销毁
+
+可以删除不再需要的 volume，但一定要确保知道自己正在做什么，volume 删除后数据是找不回来的。
+
+docker 不会销毁 bind mount，删除数据的工作只能由 host 负责。对于 docker managed volume，在执行 docker rm 删除容器时可以带上 -v 参数，docker 会将容器使用到的 volume 一并删除，但前提是没有其他容器 mount 该 volume，目的是保护数据。
+
+如果删除容器时没有带 -v 呢？这样就会产生孤儿 volume，好在 docker 提供了 volume 子命令可以对 docker managed volume 进行维护。请看下面的例子：
+
+![数据共享-9](/assets/数据共享-9.PNG)
+
+因为没有使用 -v，volume 遗留了下来。对于这样的孤儿 volume，可以用 docker volume rm 删除
+
+![数据共享-10](/assets/数据共享-10.PNG)
+
+
+
+容器 bbox 使用的 docker managed volume 可以通过 docker volume ls 查看到。因为没有使用 -v，volume 遗留了下来。对于这样的孤儿 volume，可以用 docker volume rm 删除
+
+
