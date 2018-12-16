@@ -25,3 +25,17 @@ Docker 支持多种 storage driver，有 AUFS、Device Mapper、Btrfs、OverlayF
 
 - 没有哪个 driver 能够适应所有的场景。
 - driver 本身在快速发展和迭代。
+
+不过 Docker 官方给出了一个简单的答案：
+优先使用 Linux 发行版默认的 storage driver。
+
+Docker 安装时会根据当前系统的配置选择默认的 driver。默认 driver 具有最好的稳定性，因为默认 driver 在发行版上经过了严格的测试，运行docker info查看默认driver。
+
+
+对于某些容器，直接将数据放在由 storage driver 维护的层中是很好的选择，比如那些无状态的应用。无状态意味着容器没有需要持久化的数据，随时可以从镜像直接创建。
+
+比如 busybox，它是一个工具箱，我们启动 busybox 是为了执行诸如 wget，ping 之类的命令，不需要保存数据供以后使用，使用完直接退出，容器删除时存放在容器层中的工作数据也一起被删除，这没问题，下次再启动新容器即可。
+
+但对于另一类应用这种方式就不合适了，它们有持久化数据的需求，容器启动时需要加载已有的数据，容器销毁时希望保留产生的新数据，也就是说，这类容器是有状态的。
+
+这就要用到 Docker 的另一种存储机制：Data Volume，下一节我们讨论。
