@@ -136,7 +136,7 @@ zp_net 创建时没有指定 --subnet，如果指定静态 IP 报错如下：
 
 查看docker host上的iptables规则，如下图所示：
 
-![NAT](/assets/NAT.png)
+![NAT](/assets/NAT查看.png)
 
 在NAT表中，又这么一条规则：
 
