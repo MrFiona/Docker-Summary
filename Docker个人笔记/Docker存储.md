@@ -103,3 +103,6 @@ docker managed volume 的创建过程：
 
 除了通过 docker inspect 查看 volume，我们也可以用 docker volume 命令：
 
+![docker-managed-volume-3](/assets/docker-managed-volume-4.PNG)
+
+目前，docker volume 只能查看 docker managed volume，还看不到 bind mount；同时也无法知道 volume 对应的容器，这些信息还得靠docker inspect。
